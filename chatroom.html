@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>AES-Chat</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' href='main.css'>
+</head>
+
+<body>
+  <div class="container shadowbox" style="padding: 15px;">
+
+        <div>
+          <h1 style="font-size: 60px;">Elon-chan</h1>
+          <h6>by G7</h6>
+          <br>
+          <h2>#<script>document.write(document.location.href.split('#')[1].split('|')[0])</script></h2>
+        </div>
+        <br>
+
+        <div id="chatroom"></div>
+        
+        <br>
+        <form>
+        <div class='form-inline'>
+          <div class="form-group mb-2">
+            <input type="text" class="form-control" id="nick" placeholder="Nick">
+          </div>
+          <div class="form-group mb-2">
+            <input type="color" class="form-control" id="color" style="width:50px" value="#000001">
+          </div>
+        </div>
+        <div class='form-inline'>
+          <div class="messagesend-container">
+            <div class="form-group mb-2" style="width:100%;">
+              <input type="text" class="form-control" id="newmsg" placeholder="Message" style="width: 100%;">
+            </div>
+          </div>
+          <div class="messagesendbutton-container">
+            <button id="btn-sendmsg" class="btn btn-primary mx-sm-3 mb-2">Send</button>
+            <span class='pulse'>*</span>
+          </div>
+        </div>
+        </form>  
+
+
+
+
+  </div><!-- .container -->
+
+
+  <script type="text/javascript" src="aes.js"></script>
+  <script type="text/javascript" src="md5.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <!--
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+-->
+
+  
+</body>
+
+</html>

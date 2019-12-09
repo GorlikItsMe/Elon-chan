@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>AES-Chat</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' href='main.css'>
+</head>
+
+<body>
+  <div class="container shadowbox" style="padding: 15px;">
+    <div class="row">
+      <div class="col-sm">
+          <div>
+              <h1 style="font-size: 60px;">Elon-chan</h1>
+              <h6>by G7</h6>
+            </div>
+            <br>
+            <div class='form'>
+              <div class="form-group">
+                <label for="input-name">Nazwa Pokoju</label>
+                <input type="text" class="form-control" id="input-name" aria-describedby="roomNameHelp" value="general">
+                <small id="roomNameHelp" class="form-text text-muted">Przekaż ja znajomym</small>
+              </div>
+              <div class="form-group">
+                <label for="input-key">Password</label>
+                <input type="password" class="form-control" id="input-key" aria-describedby="roomPasswdHelp" value="public">
+                <small id="roomPasswdHelp" class="form-text text-muted">Klucz do rozszyfrowania (przekaż go bezpiecznym kanałem)</small>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Obiecuje że treści bardzo nie legalnych nie będe wrzucał</label>
+              </div>
+              <button id="btn-join" class="btn btn-primary" style="margin: 0 auto;display: inherit;">Join chat</button>
+            </div>
+
+
+      </div>
+
+      <div class="col-sm center-container">`
+          <img src="img/animegirl.jpg" class="logo">
+      </div>
+    </div>
+    
+
+  
+
+    
+    
+
+  </div>
+
+  <script>
+if (document.location.href.split('#')[1] != undefined){
+  document.location.href = document.location.href.split('#')[0];
+}
+
+document.getElementById('btn-join').onclick = function() {
+    document.location.href = '/chatroom.html#'+document.getElementById('input-name').value+"|"+md5(document.getElementById('input-key').value);
+};
+
+  </script>
+
+
+  <script type="text/javascript" src="aes.js"></script>
+  <script type="text/javascript" src="md5.js"></script>
+
+  <!--
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>

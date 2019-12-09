@@ -1,0 +1,61 @@
+body{
+    background-image: url("/img/background.jpg");
+    background-size: cover;
+	color: #ffffff;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #282828;
+}
+
+#container{
+    color: #fff;
+	width: 500px;
+}
+
+.shadowbox{
+    background-color: rgba(28, 28, 28, 0.6)
+}
+
+.logo{
+	height: 400px;
+}
+
+.center-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.messagesend-container{
+	width: 90%;
+	float: left;
+}
+.messagesendbutton-container{
+  width: 10%;
+  float: right;
+}
+
+.pulse
+{
+    animation: pulsePop 1s ease-out;
+    animation-iteration-count: 1;
+	opacity: 0;
+	color: lime;
+}
+
+@keyframes pulsePop {
+    0% {
+        display: none;
+        opacity: 1;
+    }
+
+
+    100% {
+        display: block;
+        opacity: 0;
+    }
+}
